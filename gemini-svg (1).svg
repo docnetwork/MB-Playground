@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none" stroke="#222222" stroke-width="2.5">
+  <!-- Outer Door Frame -->
+  <path d="M 27 25 L 21 25 L 21 78" fill="none" />
+  <path d="M 46 25 L 55 25 L 55 78" fill="none" />
+  
+  <!-- Open Door Outline -->
+  <polygon points="24,25 44,21 44,83 24,78" fill="none" stroke="#222222" stroke-width="2.5" stroke-linejoin="round" />
+  
+  <!-- Door Knob / Handle -->
+  <circle cx="40" cy="55" r="1.5" fill="none" stroke="#222222" stroke-width="2" />
+  
+  <!-- Arrow (Shaft and Open V-Head) -->
+  <line x1="80" y1="51" x2="63" y2="51" fill="none" />
+  <polyline points="71,43 63,51 71,59" fill="none" />
+</svg>
