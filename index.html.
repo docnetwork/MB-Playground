@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Attendance Icon POC</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6f8;
+      color: #202938;
+      padding: 24px;
+      margin: 0;
+    }
+    main {
+      max-width: 520px;
+      margin: 40px auto;
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px #0001;
+    }
+    h1 { font-size: 24px; }
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+    button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background: #fff;
+      border: 1px solid #777;
+      border-radius: 6px;
+      color: #202938;
+      font-size: 16px;
+      cursor: pointer;
+      min-height: 48px;
+    }
+    button:hover { background: #eef3fa; }
+    button:focus-visible {
+      outline: 3px solid #2563eb;
+      outline-offset: 3px;
+    }
+    button:active { background: #dbeafe; }
+    button img {
+      width: 24px;
+      height: 24px;
+    }
+    #status {
+      padding: 14px;
+      background: #f0f4f8;
+      border-radius: 6px;
+      min-height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Attendance Icon POC</h1>
+    <p>Testing custom SVG icons for attendance actions.</p>
+
+    <div class="actions">
+      <button type="button" id="checkIn">
+        <img src="./check-in.svg" alt="">
+        Check in
+      </button>
+
+      <button type="button" id="checkOut">
+        <img src="./check-out.svg" alt="">
+        Check out
+      </button>
+    </div>
+
+    <p id="status" role="status" aria-live="polite">
+      Select an attendance action.
+    </p>
+  </main>
+
+  <script>
+    document.getElementById("checkIn")
+      .addEventListener("click", () => {
+        document.getElementById("status")
+          .textContent = "Check-in selected!";
+      });
+
+    document.getElementById("checkOut")
+      .addEventListener("click", () => {
+        document.getElementById("status")
+          .textContent = "Check-out selected!";
+      });
+  </script>
+</body>
+</html>
